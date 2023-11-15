@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Line Chart JS</title>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">   
+      html, body, #container { 
+        width: 100%; height: 100%; margin: 0; padding: 0; background-color: gray;
+      } 
+    </style>
+  </head>
+  <body>  
+    <div id="container"></div>
+    <script>
+          let revenue;
+        let bottles = 0;
+        const boxesSold = 10;
+        const price = 40.00;
+        const perBot = 12;
+        const manCost = -25;
+        const startCosts = -350.00;
+        let i = 0;
+        var dataSet = anychart.data.set;
+        var chart = anychart.line();
+
+        //figure out how the data sets work, then make revenue and i the two axes of the chart
+        for(i = 0; i < boxesSold; i++)
+            {
+                revenue = (startCosts + price * i) - manCost * i;
+                dataSet({x:revenue});
+                dataSet({val:i});
+            }
+    </script>
+  </body>
+</html>
