@@ -1,0 +1,1 @@
+This is a program with an HTML user interface used to generate entries in a list additively to a list of profit which is a sum of previous numbers plus current sale.
